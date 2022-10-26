@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
+import GoogleButton from "react-google-button";
 
 export const Login = () => {
   return (
@@ -22,6 +23,7 @@ export const Login = () => {
           </div>
         </Form>
         <hr />
+        <GoogleButton />
       </div>
     </>
   );
