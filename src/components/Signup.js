@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
-import GoogleButton from "react-google-button";
 import {Link, useNavigate} from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -43,9 +42,7 @@ export const Signin = () => {
           </div>
         </Form>
         <hr />
-        <GoogleButton />
-        <hr />
-        <div className="p-4 boxmt-3 text-center">Don't have an account?  <Link to="/"> sign up</Link></div>
+        <div className="p-4 boxmt-3 text-center">Don't have an account?  <Link to="/"> Log In</Link></div>
       </div>
     </>
   );
