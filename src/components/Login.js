@@ -1,20 +1,39 @@
-import React from "react";
-import { Form, Button } from "react-bootstrap";
+import React, {useState} from "react";
+import { Form, Button, Alert } from "react-bootstrap";
 import GoogleButton from "react-google-button";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
 
 export const Login = () => {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const {logIn} = useUserAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e)=>{
+    e.preventDefault()
+    setError("")
+    try{
+      await logIn(email, password);
+      navigate('/home')
+    }catch(error){
+      setError(error.message);
+    }
+  }
+
   return (
     <>
       <div className="p-4 box">
         <center><h2 className="mb-3">Login</h2></center>
-        <Form>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" onChange={(e)=> setEmail(e.target.value)}/>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" onChange={(e)=> setPassword(e.target.value)}/>
           </Form.Group>
 
           <div className="d-grid gap-2">
