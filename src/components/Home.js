@@ -14,7 +14,7 @@ export const Home = () => {
   }
   return (
     <>
-      <div className="d-grid gap-2">
+      <div className="logOut">
       <div>{user && user.email}</div>
       <Button variant="primary" onClick={handleLogOut}>Log Out</Button>
       </div>

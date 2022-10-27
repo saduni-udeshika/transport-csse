@@ -22,7 +22,7 @@ export const Signin = () => {
   }
 
   return (
-    <>
+    <div className="container">
       <div className="p-4 box">
         <center><h2 className="mb-3">Signup</h2></center>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -44,6 +44,6 @@ export const Signin = () => {
         <hr />
         <div className="p-4 boxmt-3 text-center">Don't have an account?  <Link to="/"> Log In</Link></div>
       </div>
-    </>
+    </div>
   );
 };

@@ -33,7 +33,7 @@ export const Login = () => {
   }
 
   return (
-    <>
+    <div className="container">
       <div className="p-4 box">
         <center><h2 className="mb-3">Login</h2></center>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -57,6 +57,6 @@ export const Login = () => {
         <hr />
         <div className="p-4 boxmt-3 text-center">Don't have an account?  <Link to="/signup"> sign up</Link></div>
       </div>
-    </>
+    </div>
   );
 };

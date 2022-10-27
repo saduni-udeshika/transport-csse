@@ -7,6 +7,7 @@ body{
     align-items: center;
     height: 100vh;
 }
+
 .box{
     border: 1px solid #dfdfdf;
     background-color: #fff;
@@ -21,4 +22,8 @@ body{
 .g-btn > div > svg{
     width: 40px !important;
     height: 38px !important;
+}
+.logOut{
+    position: static;
+    
 }
