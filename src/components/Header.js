@@ -15,8 +15,9 @@ function Header(){
     </Nav.Link>
       <Nav.Link href="/home">Crowded Parts</Nav.Link>
       <Nav.Link href="/table">Time Tables</Nav.Link>
-      <Nav.Link href="/home">Manage Finance</Nav.Link>
-      <Nav.Link href="/home">Assign Inspectors</Nav.Link>
+      <Nav.Link href="/addtimetable">Manage Time Tables</Nav.Link>
+      <Nav.Link href="/">Manage Finance</Nav.Link>
+      <Nav.Link href="/asignInspectors">Assign Inspectors</Nav.Link>
       <NavDropdown title="More" id="collasible-nav-dropdown">
         <NavDropdown.Item href="/home">View Reports</NavDropdown.Item>
         <NavDropdown.Item href="/home">Feedbacks</NavDropdown.Item>
