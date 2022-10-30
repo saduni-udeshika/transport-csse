@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useUserAuth } from "../context/UserAuthContext";
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel';
+
 
 export const Home = () => {
   const {user, logOut} = useUserAuth();
@@ -15,7 +16,7 @@ export const Home = () => {
   }
   return (
     <>
-    
+     
       <div className="logOut">
       <div>{user && user.email}</div>
       <Button variant="primary" onClick={handleLogOut}>Log Out</Button>
@@ -51,7 +52,7 @@ export const Home = () => {
 
    
    
-   alt="First slide"
+   alt="Second slide"
     />
 
     <Carousel.Caption >

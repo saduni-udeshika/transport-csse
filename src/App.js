@@ -8,7 +8,9 @@ import {Home} from "./components/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import Header from './components/Header';
 import Footer from './components/Footer'; 
-
+import AddTimeTable from './components/TimeTable';
+import AssignInspectors from "./components/AssignInspectors";
+import Table from "./components/Table";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="signup" element={<Signin />} />
               <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+              <Route exact path="/table" element={<Table/>} />
+             <Route exact path="/addtimetable" element={<AddTimeTable/>} />
+             <Route exact path="/asignInspectors" element={<AssignInspectors/>} />
             </Routes>
             <Footer/>
           </UserAuthContextProvider>
