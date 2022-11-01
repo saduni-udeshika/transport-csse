@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import AddTimeTable from './components/TimeTable';
 import AssignInspectors from "./components/AssignInspectors";
 import Table from "./components/Table";
+import Inspectorform from "./components/Inspectorform";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/table" element={<Table/>} />
              <Route exact path="/addtimetable" element={<AddTimeTable/>} />
              <Route exact path="/asignInspectors" element={<AssignInspectors/>} />
+             <Route exact path="/inspectorsforms" element={<Inspectorform/>} />
             </Routes>
             <Footer/>
           </UserAuthContextProvider>
