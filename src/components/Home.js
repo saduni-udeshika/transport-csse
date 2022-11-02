@@ -1,5 +1,8 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { Button } from "react-bootstrap";
+import { useUserAuth } from "../context/UserAuthContext";
+import Carousel from 'react-bootstrap/Carousel';
+
 
 export const Home = () => {
   return (

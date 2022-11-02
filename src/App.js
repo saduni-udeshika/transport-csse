@@ -4,32 +4,54 @@ import "./App.css";
 import { Login } from "./components/Login";
 import { Signin } from "./components/Signup";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
-import {Home} from "./components/Home";
+import { Home } from "./components/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
-import Header from './components/Header';
-import Footer from './components/Footer'; 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { CrowdedParts } from "./pages/crowdedParts/CrowdedParts";
-
+import AddTimeTable from "./components/TimeTable";
+import AssignInspectors from "./components/AssignInspectors";
+import Table from "./components/Table";
+import Inspectorform from "./components/Inspectorform";
 
 function App() {
   return (
-   
-      <Row>
-        <Col>
-          <UserAuthContextProvider>
+    <Row>
+      <Col>
+        <UserAuthContextProvider>
           <Header />
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="signup" element={<Signin />} />
-              <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-              <Route path="/crowded-parts" element={<ProtectedRoute><CrowdedParts /></ProtectedRoute>} />
-            </Routes>
-            <Footer/>
-          </UserAuthContextProvider>
-        </Col>
-      </Row>
-     
-   
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="signup" element={<Signin />} />
+            <Route
+              path="/home"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/crowded-parts"
+              element={
+                <ProtectedRoute>
+                  <CrowdedParts />
+                </ProtectedRoute>
+              }
+            />
+            <Route exact path="/table" element={<Table />} />
+            <Route exact path="/addtimetable" element={<AddTimeTable />} />
+            <Route
+              exact
+              path="/asignInspectors"
+              element={<AssignInspectors />}
+            />
+            <Route exact path="/inspectorsforms" element={<Inspectorform />} />
+          </Routes>
+          <Footer />
+        </UserAuthContextProvider>
+      </Col>
+    </Row>
   );
 }
 
