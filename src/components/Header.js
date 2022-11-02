@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
 function Header() {
@@ -20,7 +21,7 @@ function Header() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="/home">Crowded Parts</Nav.Link>
+          <Nav.Link><Link to="/crowded-parts">Crowded Parts</Link></Nav.Link>
           <Nav.Link href="/table">Time Tables</Nav.Link>
           <Nav.Link href="/home">Manage Finance</Nav.Link>
           <Nav.Link href="/home">Assign Inspectors</Nav.Link>
@@ -37,7 +38,7 @@ function Header() {
             👤
           </Nav.Link>
           <Nav.Link>{user && user.email}</Nav.Link>
-          <Button variant="primary" onClick={handleLogOut}>
+          <Button variant="dark" onClick={handleLogOut} >
             Log Out
           </Button>
         </Nav>
