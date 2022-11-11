@@ -13,6 +13,7 @@ import AddTimeTable from "./components/TimeTable";
 import AssignInspectors from "./components/AssignInspectors";
 import Table from "./components/Table";
 import Inspectorform from "./components/Inspectorform";
+import Inspector from './components/Inspector';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
               element={<AssignInspectors />}
             />
             <Route exact path="/inspectorsforms" element={<Inspectorform />} />
+            <Route exact path="/inspector" element={<Inspector/>} />
           </Routes>
          
         </UserAuthContextProvider>
