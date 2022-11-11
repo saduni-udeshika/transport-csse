@@ -7,7 +7,7 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 import { Home } from "./components/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+
 import { CrowdedParts } from "./pages/crowdedParts/CrowdedParts";
 import AddTimeTable from "./components/TimeTable";
 import AssignInspectors from "./components/AssignInspectors";
@@ -48,7 +48,7 @@ function App() {
             />
             <Route exact path="/inspectorsforms" element={<Inspectorform />} />
           </Routes>
-          <Footer />
+         
         </UserAuthContextProvider>
       </Col>
     </Row>
