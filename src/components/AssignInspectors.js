@@ -1,7 +1,7 @@
 import React, {useState,  useEffect} from"react"
 import { Form ,Card, Button, Row, Col, Table, Container, } from "react-bootstrap";
 import firebaceDb from "../firebase";
-import Inspectorfrom from "./Inspectorform";
+import Inspectorform from "./Inspectorform"
 const AssignInspectors = () => {
 
   const [route, setRoute] = useState(" ");
