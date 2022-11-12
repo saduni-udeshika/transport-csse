@@ -8,6 +8,7 @@ import {
 } from "../../services/mapsService";
 import "./CrowdedParts.css";
 import PolylineUtil from "polyline-encoded";
+import EventSystem from "../../modules/EventSystem";
 
 export const CrowdedParts = () => {
   const [inputs, setInputs] = useDebounce(
@@ -21,6 +22,24 @@ export const CrowdedParts = () => {
   useEffect(() => {
     getBusStations();
   }, [inputs]);
+
+  const onMapCenterChange = () => {
+    // Commented for API key usage issues
+    // getBusStations();
+  };
+
+  useEffect(() => {
+    EventSystem.getInstance().addListener(
+      "map_center_change",
+      onMapCenterChange
+    );
+    return () => {
+      EventSystem.getInstance().removeListener(
+        "map_center_change",
+        onMapCenterChange
+      );
+    };
+  }, []);
 
   const getBusStations = async () => {
     if (inputs.origin == null || inputs.destination == null) return;

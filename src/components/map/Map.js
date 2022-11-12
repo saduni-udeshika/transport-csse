@@ -7,6 +7,7 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import "./Map.css";
+import EventSystem from "../../modules/EventSystem";
 
 const Map = (props) => {
   return (
@@ -15,6 +16,9 @@ const Map = (props) => {
       zoom={12}
       center={{ lat: 6.9271, lng: 79.9 }}
       mapContainerClassName="map"
+      onCenterChanged={() =>
+        EventSystem.getInstance().fire("map_center_change")
+      }
     >
       <TransitLayer />
       {props.polylines.map((line, index) => (

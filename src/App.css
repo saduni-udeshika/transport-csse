@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: rgb(137, 207, 240);
   width: 100%;
   height: 100vh;
 }
@@ -24,4 +24,13 @@ body {
 .g-btn > div > svg {
   width: 40px !important;
   height: 38px !important;
+}
+.footer{
+  width: 100%;
+  height: 100vh;
+}
+
+.link{
+  text-decoration: none;
+  color: #A7C7E7;
 }

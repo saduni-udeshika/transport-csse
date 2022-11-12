@@ -1,4 +1,3 @@
-import { Col, Row } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Login } from "./components/Login";
@@ -16,8 +15,7 @@ import Inspectorform from "./components/Inspectorform";
 
 function App() {
   return (
-    <Row>
-      <Col>
+    <div className="main-container">
         <UserAuthContextProvider>
           <Header />
           <Routes>
@@ -48,10 +46,8 @@ function App() {
             />
             <Route exact path="/inspectorsforms" element={<Inspectorform />} />
           </Routes>
-         
         </UserAuthContextProvider>
-      </Col>
-    </Row>
+    </div>
   );
 }
 
