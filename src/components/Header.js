@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
+import "../App.css"
 
 function Header() {
   const { user, logOut } = useUserAuth();
@@ -21,7 +22,7 @@ function Header() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link><Link to="/crowded-parts">Crowded Parts</Link></Nav.Link>
+          <Nav.Link><Link className="link" to="/crowded-parts">Crowded Parts</Link></Nav.Link>
           <Nav.Link href="/table">Time Tables</Nav.Link>
           <Nav.Link href="/home">Manage Finance</Nav.Link>
           <Nav.Link href="/home">Assign Inspectors</Nav.Link>
